@@ -29,6 +29,7 @@ RUN set -x \
     && rm -rf $SONARQUBE_HOME/bin/*
 
 VOLUME "$SONARQUBE_HOME/data"
+VOLUME "$SONARQUBE_HOME/extensions"
 
 WORKDIR $SONARQUBE_HOME
 COPY run.sh $SONARQUBE_HOME/bin/
